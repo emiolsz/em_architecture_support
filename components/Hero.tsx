@@ -1,33 +1,47 @@
 export default function Hero() {
   return (
-    <section className="h-screen relative overflow-hidden">
-
+    <section className="relative h-screen overflow-hidden">
+      {/* Zdjęcie tła */}
       <img
-        src="/hero.jpg"
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover"
+        src="/images/hero.jpg"
+        alt="Arch Support"
+        className="absolute inset-0 h-full w-full object-cover"
       />
 
-      <div className="absolute inset-0 bg-black/30" />
+      {/* Przyciemnienie */}
+      <div className="absolute inset-0 bg-black/40" />
 
-      <div className="relative z-10 h-full flex items-center">
+      {/* Treść */}
+      <div className="relative z-10 flex h-full items-end">
+        <div className="max-w-7xl px-8 pb-24 md:px-12 md:pb-32">
+          <div className="mb-6 text-xs uppercase tracking-[0.3em] text-white/60">
+            ARCH SUPPORT
+          </div>
 
-        <div className="max-w-7xl mx-auto px-6">
-
-          <h1 className="text-white text-7xl font-light max-w-4xl leading-tight">
-            Rozwiązania dla architektów.
-            Nie katalog wykonawców.
+          <h1 className="max-w-5xl text-6xl md:text-8xl font-light leading-[0.95] text-white">
+            Od problemu
+            <br />
+            do rozwiązania.
           </h1>
 
-          <p className="text-white/80 mt-8 text-xl max-w-xl">
-            Odkrywamy ludzi, materiały i technologie stojące za
-            najlepszymi realizacjami wnętrz.
+          <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/75">
+            Odkrywamy ludzi, technologie i materiały stojące za
+            najbardziej wymagającymi realizacjami wnętrz.
+            Łączymy architektów z wiedzą, doświadczeniem i sprawdzonymi
+            specjalistami.
           </p>
 
+          <div className="mt-12 flex flex-wrap gap-4">
+            <button className="border border-white px-6 py-3 text-sm uppercase tracking-[0.2em] text-white transition hover:bg-white hover:text-black">
+              Czytaj historie
+            </button>
+
+            <button className="text-sm uppercase tracking-[0.2em] text-white/80 transition hover:text-white">
+              Poznaj wykonawców →
+            </button>
+          </div>
         </div>
-
       </div>
-
     </section>
   );
 }
