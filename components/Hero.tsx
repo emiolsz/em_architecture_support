@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="relative h-screen overflow-hidden">
       {/* Zdjęcie tła */}
       <img
-        src="/images/hero.jpg"
+        src="/images/hero.png"
         alt="Arch Support"
         className="absolute inset-0 h-full w-full object-cover"
       />
