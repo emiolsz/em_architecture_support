@@ -4,27 +4,51 @@ const stories = [
   {
     title: "Jak połączyć wykładzinę bez widocznego łączenia?",
     category: "Wykładziny",
-    image:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/story-1.png",
   },
   {
     title: "Światło, które nie razi. Rozmowa z ekspertami ILUM",
     category: "Oświetlenie",
-    image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/story-2.png",
   },
   {
     title: "Kamień wielkoformatowy — błędy wykonawcze",
     category: "Kamień",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/story-3.png",
   },
   {
     title: "Czy luksusowy dywan wymaga specjalistycznej konserwacji?",
     category: "Konserwacja",
-    image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/story-4.png",
   },
 ];
 
-export
+export default function FeaturedStories() {
+  return (
+    <section className="max-w-7xl mx-auto px-8 py-24">
+      <div className="flex items-center justify-between mb-12">
+        <h2 className="text-4xl font-light">
+          Historie i rozwiązania
+        </h2>
+
+        <a
+          href="#"
+          className="text-sm uppercase tracking-[0.2em] text-zinc-500 hover:text-black"
+        >
+          Wszystkie artykuły
+        </a>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {stories.map((story) => (
+          <ArticleCard
+            key={story.title}
+            title={story.title}
+            category={story.category}
+            image={story.image}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
